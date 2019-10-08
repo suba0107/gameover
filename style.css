@@ -17,13 +17,55 @@
     font-weight: lighter;
 }
 
+h1 {
+    font-family: "safety", sans-serif;
+    font-weight: lighter;
+}
+
+h2 {
+    font-family: "safety", sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
 :root {
     --bg-color-blue: #414b5a;
-    --bg-color-grey: #bd4f6e;
+    --bg-color-grey: #EAEAEA;
     --link-color: #fd6d6f;
     --button-color: #67A14D;
     --accent-color: #33ff00;
     --footer-header: #28292C;
 }
 
+/*-------------GENERALT----------*/
+* {
+    box-sizing: border-box;
+}
+
+/*Background color*/
+body {
+    margin: 0;
+}
+
 /*-------------HEADER------------*/
+
+header {
+    background-color: var(--footer-header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo img {
+    width: 200px;
+    height: 30.2px;
+    margin: 1rem;
+}
+
+#menuknap {
+    color: var(--bg-color-grey);
+    margin-right: 1rem;
+    font-size: 2rem;
+}
