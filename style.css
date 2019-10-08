@@ -1,0 +1,29 @@
+/*-----------Variables & fonts-----------*/
+
+@font-face {
+    font-family: "safety";
+    src: url("fonts/safety.woff") format('woff');
+}
+
+@font-face {
+    font-family: "safety";
+    src: url("fonts/safety-bold.woff") format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "myfont";
+    src: url("fonts/safety-light.woff") format('woff');
+    font-weight: lighter;
+}
+
+:root {
+    --bg-color-blue: #414b5a;
+    --bg-color-grey: #bd4f6e;
+    --link-color: #fd6d6f;
+    --button-color: #67A14D;
+    --accent-color: #33ff00;
+    --footer-header: #28292C;
+}
+
+/*-------------HEADER------------*/
