@@ -20,6 +20,8 @@
 h1 {
     font-family: "safety", sans-serif;
     font-weight: lighter;
+    margin-top: 0;
+    padding-top: 1rem;
 }
 
 h2 {
@@ -39,14 +41,32 @@ p {
     --footer-header: #28292C;
 }
 
-/*-------------GENERALT----------*/
+/*-------------Generelt & common styling----------*/
 * {
     box-sizing: border-box;
 }
 
-/*Background color*/
 body {
     margin: 0;
+}
+
+
+.ribbon-blue {
+    background-color: var(--bg-color-blue);
+
+}
+
+.ribbon-grey {
+    background-color: var(--bg-color-grey);
+
+}
+
+section {
+    margin: 0;
+}
+
+article {
+    padding: 1rem;
 }
 
 /*-------------HEADER------------*/
@@ -70,8 +90,70 @@ header {
     font-size: 2rem;
 }
 
+
 /*------------SPLASH--------------*/
 #splash img {
-    width: 100vw;
+    width: 100%;
     height: 50vw;
+}
+
+/*------------FOOTER---------------*/
+footer {
+    background-color: var(--footer-header);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#up-arrow {
+    width: 50px;
+    height: 78.50px;
+}
+
+#up-arrow:hover {
+    animation-name: bounce;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+#op-igen {
+    position: absolute;
+    bottom: 137px;
+    right: 10px;
+    cursor: pointer;
+
+    margin-right: 0.5rem;
+
+}
+
+#op-igen p {
+    /*   position: absolute;
+    bottom: 70px;
+    right: 0;
+    margin-right: 0.5rem;*/
+    position: relative;
+    font-family: "Safety", sans-serif;
+    padding: 0;
+    margin: 0;
+    color: var(--bg-color-blue);
+}
+
+#op-igen:hover p {
+    color: #ffffff;
 }
