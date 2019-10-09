@@ -50,6 +50,9 @@ body {
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 .ribbon-blue {
     background-color: var(--bg-color-blue);
@@ -69,6 +72,15 @@ article {
     padding: 1rem;
 }
 
+.hide {
+    transform: translateX(100%);
+    opacity: 0;
+    /*Placerer element 100% til højre så det er "skjult"*/
+
+}
+
+
+
 /*-------------HEADER------------*/
 
 header {
@@ -76,18 +88,56 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 200;
+    position: fixed;
+    width: 100%;
 }
 
 #logo img {
     width: 200px;
     height: 30.2px;
     margin: 1rem;
+    position: relative;
+    z-index: 100;
 }
+
+
 
 #menuknap {
     color: var(--bg-color-grey);
     margin-right: 1rem;
+    z-index: 100;
     font-size: 2rem;
+    display: inline-block;
+    font-size: 2.3rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    position: fixed;
+    padding: 0.5rem;
+    font-family: 'Safety', sans-serif;
+    cursor: pointer;
+}
+
+/*Burgermenu*/
+#menu {
+    opacity: 1;
+    list-style-type: none;
+    transition: transform .4s;
+    transform-origin: top left;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    padding: 7rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--footer-header);
+    height: 100vh;
+
 }
 
 
@@ -97,6 +147,11 @@ header {
     height: 50vw;
 }
 
+/*-----------VIDEO-SECTION----------*/
+#video-section h1 {
+    color: var(--bg-color-grey);
+}
+
 /*------------FOOTER---------------*/
 footer {
     background-color: var(--footer-header);
@@ -104,6 +159,12 @@ footer {
     margin-left: auto;
     margin-right: auto;
     height: 200px;
+    color: #9EA1A5;
+    font-family: "Safety", sans-serif;
+    text-align: center;
+
+
+
 }
 
 @keyframes bounce {
@@ -156,4 +217,29 @@ footer {
 
 #op-igen:hover p {
     color: #ffffff;
+}
+
+#some-icons {
+    text-align: left;
+    padding-top: 2rem;
+    padding-left: 1rem;
+}
+
+#some-icons img {
+    width: 50px;
+    height: 50px;
+    margin: 0.5rem;
+}
+
+#fb:hover {
+    /*Bruger https://codepen.io/sosuke/pen/Pjoqqp til at lave hex code om til filter*/
+    filter: invert(53%) sepia(30%) saturate(3011%) hue-rotate(200deg) brightness(89%) contrast(82%);
+}
+
+#in:hover {
+    filter: invert(21%) sepia(98%) saturate(2173%) hue-rotate(183deg) brightness(104%) contrast(101%);
+}
+
+#tw:hover {
+    filter: invert(46%) sepia(88%) saturate(294%) hue-rotate(163deg) brightness(113%) contrast(100%);
 }
