@@ -91,6 +91,9 @@ header {
     z-index: 200;
     position: fixed;
     width: 100%;
+    height: 70px;
+    margin: 0 auto;
+
 }
 
 #logo img {
@@ -130,15 +133,37 @@ header {
     position: fixed;
     width: 100%;
     z-index: 50;
-    padding: 7rem 1rem;
+    padding: 11rem 0 1rem 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     background-color: var(--footer-header);
     height: 100vh;
+    margin: 0;
+
+
+
+
 
 }
+
+#menu a {
+    font-family: 'Safety', sans-serif;
+    font-weight: lighter;
+    text-decoration: none;
+    color: var(--bg-color-grey);
+    top: 0;
+    border-bottom-style: solid;
+    border-bottom-color: #404040;
+    border-bottom-width: thin;
+    padding-bottom: 2rem;
+    width: 100vw;
+    padding-left: 1rem;
+
+
+}
+
 
 
 /*------------SPLASH--------------*/
@@ -242,4 +267,69 @@ footer {
 
 #tw:hover {
     filter: invert(46%) sepia(88%) saturate(294%) hue-rotate(163deg) brightness(113%) contrast(100%);
+}
+
+/*-----MEDIA QUERIES------*/
+
+@media screen and (min-width:1024px) {
+    header {
+        background-color: var(--footer-header);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 200;
+        position: fixed;
+        width: 100%;
+        height: 70px;
+        margin: 0 auto;
+
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #menuknap {
+        display: none;
+    }
+
+    /*Burgermenu*/
+    #menu {
+        position: relative;
+        max-width: 1024px;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        height: 70px;
+        margin: 0;
+    }
+
+    #menu li {
+        display: inline-block;
+    }
+
+    #menu.hide {
+        transform: none;
+        opacity: 1;
+    }
+
+    #menu a {
+        border-bottom-style: hidden;
+        padding: 2rem;
+        max-width: 10vw;
+
+
+    }
+}
+
+@media (min-width: 1440px) {
+    nav {
+        max-width: 1310px;
+    }
 }
